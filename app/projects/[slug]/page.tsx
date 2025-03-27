@@ -14,7 +14,7 @@ import {
   useDisclosure,
 } from "@heroui/react";
 
-export const animals = [
+const animals = [
   { key: "cat", label: "Cat" },
   { key: "dog", label: "Dog" },
   { key: "elephant", label: "Elephant" },
@@ -29,6 +29,7 @@ export const animals = [
   { key: "otter", label: "Otter" },
   { key: "crocodile", label: "Crocodile" },
 ];
+
 function ProjectDetailPage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -48,7 +49,7 @@ function ProjectDetailPage() {
       </div>
       <div className="mt-[20px] grid grid-cols-[25%_75%] gap-[10px]">
         <Card className="p-[20px] w-full flex flex-col gap-[20px] h-fit">
-          <Button onPress={onOpen} color="success">
+          <Button color="success" onPress={onOpen}>
             Thêm thành viên
           </Button>
           <Select
